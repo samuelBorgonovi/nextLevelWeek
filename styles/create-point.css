@@ -126,3 +126,55 @@ em cima do botao ele muda de cor.*/
 form button:hover{
     background-color: #2fb86e;
 }
+/*usando o display grid para criar
+um display com 2linhas 2 3 colunas
+conforme esta na tela molde
+grid-template-columns: 200px 200px 200px;*/
+.items-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /*significa que tenho 3colunas de 200pixels*/
+    gap: 16px; /*espaçamento entre os elementos, especial para o grid*/
+}
+
+.items-grid li{
+    background-color: #f5f5f5;
+    list-style: none; /*tira os botoes da lista*/
+
+    border: 2px solid #f5f5f5;
+    border-radius: 8px;
+
+    height: 180px;
+
+    padding: 32px 24px 16px; /*trabalha na posicao de cada elemento da minha li*/
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center; /*centralizar o texto dos elementos da li*/
+
+    cursor: pointer; /*quando mouse passar em cima do elemento ele muda para selecionar*/
+}
+
+.items-grid li span{
+    margin-top: 12px;
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+
+    color: var(--title-color);
+}
+
+/*li.selected indica que, procura dentro
+de grid qual li tem a classe selected*/
+.items-grid li.selected{
+    background: #e1faec;
+    border: 2px solid #34cb79; /*cria uma borda quando seleciono o item*/
+}
+
+.items-grid li img,
+.items-grid li span{
+    pointer-events: none;
+}
