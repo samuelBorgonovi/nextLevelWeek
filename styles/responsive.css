@@ -20,6 +20,14 @@
     #page-home main {
       align-items: center;
     }
+
+    #page-search-results .cards{
+      grid-template-columns: 1fr;
+    }
+
+    #page-search-results .cards img{
+      height: 200px;
+    }
   }
 /*  largura minima da tela
     for 1700 pra cima ele aplica regra 
