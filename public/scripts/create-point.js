@@ -67,6 +67,9 @@ function handleSelectedItem(event){
     itemLi.classList.toggle("selected") //toogle faz a funcao de adicionar ou remover
 
     const itemId = itemLi.dataset.id
+
+    console.log('ITEM ID:', itemId)
+
     
     //verisificar se existem items selecionados, se sim
     //pegar os itens selecionados
@@ -90,6 +93,7 @@ function handleSelectedItem(event){
         //add a selecao
         selectedItems.push(itemId)
     }
+
 
     //por fim ataulizar o campo escondido com os itens selecionados
     collectedItems.value = selectedItems
